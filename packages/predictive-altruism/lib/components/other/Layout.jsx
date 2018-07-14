@@ -5,7 +5,6 @@ const Layout = ({ children }) => (
   <div className="layout">
     <div className="sidebar"><Components.Nav/></div>
     <div className="main-content">{children}</div>
-    <Components.MoviesApp/>
   </div>
 );
 

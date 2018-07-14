@@ -1,11 +1,5 @@
 /*
 
-Steps Components
-
-*/
-
-/*
-
 Movies Example App Components
 
 */
