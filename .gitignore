@@ -27,6 +27,9 @@ scratch
 
 .deploy
 .deploy/*
+
+yarn-error.log
+npm-error.log
 ### Meteor template
 .meteor/local
 .meteor/meteorite

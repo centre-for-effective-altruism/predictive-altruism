@@ -1,4 +1,12 @@
-const schema = {
+import React from 'react';
+import { registerComponent } from 'meteor/vulcan:core';
+import SyntaxHighlighter from 'react-syntax-highlighter/prism';
+import { okaidia } from 'react-syntax-highlighter/styles/prism';
+
+// import schema from '../../modules/schema.js';
+
+const schema = `
+{
 
   _id: {
     type: String,
@@ -19,19 +27,6 @@ const schema = {
     type: String,
     optional: true,
     viewableBy: ['guests'],
-    /*
-
-    Uncomment on #Step12:
-
-    */
-    resolveAs: {
-      fieldName: 'user',
-      type: 'User',
-      resolver: async (movie, args, context) => {
-        return await context.Users.loader.load(movie.userId);
-      },
-      addOriginalField: true,
-    },
   },
 
   name: {
@@ -55,6 +50,13 @@ const schema = {
     searchable: true,
   },
 
-};
+}
+`
 
-export default schema;
+const Schema = () => (
+  <div className="schema">
+    <SyntaxHighlighter language="javascript" style={okaidia}>{schema}</SyntaxHighlighter>
+  </div>
+);
+
+registerComponent('Schema', Schema);
