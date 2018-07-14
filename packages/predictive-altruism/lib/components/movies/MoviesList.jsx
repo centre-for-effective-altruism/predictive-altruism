@@ -1,7 +1,7 @@
 import React from 'react';
 import { Components, registerComponent, withList } from 'meteor/vulcan:core';
 
-import Movies from '../../modules/collection.js';
+import Questions from '../../modules/collections/questions';
 
 const MoviesList = ({ loading, results }) => (
   <div className="movies-list">
@@ -10,10 +10,10 @@ const MoviesList = ({ loading, results }) => (
       <Components.Loading/> :
       results && <ul>
         {results.map(movie =>
-          <li key={movie.name}>
-            <h4>{movie.name}</h4>
-            {movie.review && <p>{movie.review}</p>}
-            {movie.user && <p><em>– {movie.user.displayName}</em></p>}
+          <li key={movie._id}>
+            <h4>{movie.title}</h4>
+            {movie.description && <p>{movie.description}</p>}
+            {movie.creator && <p><em>– {movie.creator.displayName}</em></p>}
           </li>
         )}
       </ul>
@@ -23,8 +23,8 @@ const MoviesList = ({ loading, results }) => (
 );
 
 const options = {
-  collection: Movies,
-  fragmentName: 'MoviesFragment', // uncomment on #Step11
+  collection: Questions,
+  fragmentName: 'QuestionFragment', // uncomment on #Step11
 }
 
 registerComponent('MoviesList', MoviesList,  [withList, options] ); // uncomment on #Step10

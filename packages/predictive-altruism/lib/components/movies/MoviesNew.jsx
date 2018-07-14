@@ -1,12 +1,15 @@
 import React from 'react';
 import { Components, registerComponent } from 'meteor/vulcan:core';
 
-import Movies from '../../modules/collection.js';
+import Questions from '../../modules/collections/questions';
 
 // uncomment children on #Step15:
 const MoviesNew = () => (
   <div className="movies-new">
-    <Components.SmartForm collection={Movies} mutationFragmentName="MoviesFragment"/>
+    <Components.SmartForm
+      collection={Questions}
+      mutationFragmentName="QuestionFragment"
+      fields={['title', 'description', 'resolutionDate']} />
   </div>
 );
 

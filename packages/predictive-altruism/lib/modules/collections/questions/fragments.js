@@ -1,12 +1,13 @@
 import { registerFragment } from 'meteor/vulcan:core';
 
 registerFragment(/* GraphQL */`
-  fragment MoviesFragment on Movie {
+  fragment QuestionFragment on Question {
     _id
     createdAt
-    name
-    # uncomment on #Step12
-    user{
+    title
+    description
+    resolutionDate
+    creator{
      displayName
     }
   }
