@@ -1,4 +1,8 @@
 import { addRoute } from 'meteor/vulcan:core';
 
-addRoute({ name: 'market-home', path: '/', componentName: 'MoviesApp' });
-addRoute({ name: 'question', path: '/questions/:questionId', componentName: 'QuestionSingle' });
+// Home
+addRoute({ name: 'login', path: '/', componentName: 'LoginForm' });
+
+// Questions
+addRoute({ name: 'questionsHome', path: '/questions', componentName: 'QuestionsHome' });
+addRoute({ name: 'questionSingle', path: '/questions/:questionId', componentName: 'QuestionSingle' });

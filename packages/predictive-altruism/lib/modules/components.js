@@ -3,11 +3,14 @@
 Movies Example App Components
 
 */
+import '../components/movies/LoginForm.jsx';
 
-import '../components/movies/MoviesApp.jsx';
-import '../components/movies/MoviesList.jsx';
-import '../components/movies/MoviesUsers.jsx';
-import '../components/movies/MoviesNew.jsx';
+// Questions
+import '../components/movies/QuestionsHome.jsx';
+import '../components/movies/QuestionsList.jsx';
+import '../components/movies/QuestionsNew.jsx';
+
+// Single Question
 import '../components/movies/QuestionSingle.jsx';
 import '../components/movies/QuestionPage.jsx';
 

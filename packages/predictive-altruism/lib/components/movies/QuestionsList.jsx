@@ -3,9 +3,8 @@ import { Components, registerComponent, withList } from 'meteor/vulcan:core';
 
 import Questions from '../../modules/collections/questions';
 
-const MoviesList = ({ loading, results }) => (
-  <div className="movies-list">
-    <div className="movies-contents">
+const QuestionsList = ({ loading, results }) => (
+  <div className="questions-list">
     {loading ?
       <Components.Loading/> :
       results && <ul>
@@ -18,7 +17,6 @@ const MoviesList = ({ loading, results }) => (
         )}
       </ul>
     }
-    </div>
   </div>
 );
 
@@ -27,4 +25,4 @@ const options = {
   fragmentName: 'QuestionFragment', // uncomment on #Step11
 };
 
-registerComponent('MoviesList', MoviesList,  [withList, options] ); // uncomment on #Step10
+registerComponent('QuestionsList', QuestionsList,  [withList, options] ); // uncomment on #Step10

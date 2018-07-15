@@ -4,7 +4,7 @@ import { Components, registerComponent } from 'meteor/vulcan:core';
 import Questions from '../../modules/collections/questions';
 
 // uncomment children on #Step15:
-const MoviesNew = () => (
+const QuestionNew = () => (
   <div className="movies-new">
     <Components.SmartForm
       collection={Questions}
@@ -13,4 +13,4 @@ const MoviesNew = () => (
   </div>
 );
 
-registerComponent('MoviesNew', MoviesNew);
+registerComponent('QuestionNew', QuestionNew);
