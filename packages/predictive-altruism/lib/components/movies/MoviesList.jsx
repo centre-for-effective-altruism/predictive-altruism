@@ -25,6 +25,6 @@ const MoviesList = ({ loading, results }) => (
 const options = {
   collection: Questions,
   fragmentName: 'QuestionFragment', // uncomment on #Step11
-}
+};
 
 registerComponent('MoviesList', MoviesList,  [withList, options] ); // uncomment on #Step10

@@ -30,45 +30,20 @@ const schema = {
     },
   },
 
-  title: {
-    label: 'Title',
-    type: String,
-    optional: true,
-    viewableBy: ['guests'],
-    insertableBy: ['members'],
-    editableBy: ['members'],
-    searchable: true,
-  },
-
-  description: {
-    label: 'Description',
-    type: String,
-    optional: true,
-    control: 'textarea',
-    viewableBy: ['guests'],
-    insertableBy: ['members'],
-    editableBy: ['members'],
-    searchable: true,
-  },
-
-  resolutionDate: {
-    type: Date,
-    optional: true,
-    viewableBy: ['guests'],
-    insertableBy: ['members'],
-    editableBy: ['members'],
-    searchable: true,
-  },
-
-  result: {
-    label: 'Result',
+  confidence: {
+    label: 'Confidence',
     type: Number,
-    optional: true,
     viewableBy: ['guests'],
     insertableBy: ['members'],
-    editableBy: ['members'],
-    searchable: true,
   },
+
+  questionId: {
+    type: String,
+    viewableBy: ['guests'],
+    insertableBy: ['members'],
+    // TODO resolver?
+  }
+
 };
 
 export default schema;

@@ -8,6 +8,8 @@ import '../components/movies/MoviesApp.jsx';
 import '../components/movies/MoviesList.jsx';
 import '../components/movies/MoviesUsers.jsx';
 import '../components/movies/MoviesNew.jsx';
+import '../components/movies/QuestionSingle.jsx';
+import '../components/movies/QuestionPage.jsx';
 
 /*
 
