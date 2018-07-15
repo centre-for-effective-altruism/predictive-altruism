@@ -4,7 +4,8 @@ import { Components, registerComponent } from 'meteor/vulcan:core';
 const QuestionsHome = () => (
   <div className="app-content">
     <div className="questions-home">
-      <Components.QuestionsList/>
+      <h2>You can bet on shit</h2>
+      <Components.QuestionsList />
       {/*<Components.MoviesNew />*/}
     </div>
   </div>

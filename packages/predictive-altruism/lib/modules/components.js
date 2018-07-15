@@ -3,24 +3,19 @@
 Movies Example App Components
 
 */
-import '../components/movies/LoginForm.jsx';
 
 // Questions
-import '../components/movies/QuestionsHome.jsx';
-import '../components/movies/QuestionsList.jsx';
-import '../components/movies/QuestionsNew.jsx';
+import '../components/Questions/QuestionsHome.jsx';
+import '../components/Questions/QuestionsList.jsx';
+import '../components/Questions/QuestionsNew.jsx';
+import '../components/Questions/QuestionsSingle.jsx';
+import '../components/Questions/QuestionsPage.jsx';
+// Predictions
+import '../components/Questions/PredictionsNew.jsx';
+import '../components/Questions/PredictionsList.jsx';
 
-// Single Question
-import '../components/movies/QuestionSingle.jsx';
-import '../components/movies/QuestionPage.jsx';
+// Core components
 
-/*
-
-Other Components
-
-*/
-
-import '../components/other/Schema.jsx';
-import '../components/other/GraphQLSchema.jsx';
-import '../components/other/Layout.jsx';
-import '../components/other/Nav.jsx';
+import '../components/Layout/LoginForm.jsx';
+import '../components/Layout/Layout.jsx';
+import '../components/Layout/Nav.jsx';

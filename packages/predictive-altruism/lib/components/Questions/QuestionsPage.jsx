@@ -21,22 +21,34 @@ class QuestionPage extends Component {
       <p>{document.description}</p>
       <p>Posed by: {document.creator.displayName}</p>
       <p>Resolved on: {document.resolutionDate}</p>
+      <hr />
       <Button
         bsStyle="primary"
         onClick={() => this.setState({showNewPredictionBox: true})}
       >
         Enter Prediction
       </Button>
-      {showNewPredictionBox && <Components.SmartForm
-        collection={Predictions}
-      />}
+      {showNewPredictionBox && <Components.PredictionsNew questionId={document._id} />}
+      <hr />
+      <h3>Predictions:</h3>
+      {/* TODO: How do we filter this to only the current question??? */}
+      <Components.PredictionsList
+        terms={{
+          selector: {
+            questionId: document._id,
+          }
+        }}
+      />
     </div>);
   }
 }
 
-const options = {
+const questionsWithDocOptions = {
   collection: Questions,
   fragmentName: 'QuestionFragment',
 };
 
-registerComponent('QuestionPage', QuestionPage, [withDocument, options]);
+registerComponent('QuestionPage',
+  QuestionPage,
+  [withDocument, questionsWithDocOptions],
+);

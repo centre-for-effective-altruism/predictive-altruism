@@ -41,6 +41,7 @@ const schema = {
     type: String,
     viewableBy: ['guests'],
     insertableBy: ['members'],
+
     // TODO resolver?
   }
 

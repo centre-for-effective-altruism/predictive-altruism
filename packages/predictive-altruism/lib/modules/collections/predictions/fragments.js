@@ -1,14 +1,14 @@
 import { registerFragment } from 'meteor/vulcan:core';
 
 registerFragment(/* GraphQL */`
-  fragment QuestionFragment on Question {
+  fragment PredictionFragment on Prediction {
     _id
     createdAt
-    title
-    description
-    resolutionDate
+    userId
     creator{
-     displayName
+      displayName
     }
+    confidence
+    questionId
   }
 `);
