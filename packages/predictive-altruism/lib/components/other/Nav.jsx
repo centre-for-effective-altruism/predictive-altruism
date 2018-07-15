@@ -2,12 +2,10 @@ import React from 'react';
 import { registerComponent, withCurrentUser } from 'meteor/vulcan:core';
 import { Link } from 'react-router';
 
-import withMoviesCount from '../../hocs/withMoviesCount.js';
 import withQueryResolvers from '../../hocs/withQueryResolvers.js';
 import withMutationResolvers from '../../hocs/withMutationResolvers.js';
 
 const Nav = (props) => {
-
 
   return (
     <div className="nav">
@@ -18,4 +16,4 @@ const Nav = (props) => {
   )
 };
 
-registerComponent('Nav', Nav, withMoviesCount, withQueryResolvers, withCurrentUser, withMutationResolvers);
+registerComponent('Nav', Nav, withQueryResolvers, withCurrentUser, withMutationResolvers);
